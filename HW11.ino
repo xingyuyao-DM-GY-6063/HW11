@@ -1,21 +1,24 @@
-void setup() {
-  // Set each pin connected to LEDs as OUTPUT
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
+const int ledPins[6] = {2, 3, 4, 5, 6, 7};  // Pins connected to the LEDs
+unsigned long previousMillis = 0;
 
-  // Turn all LEDs ON
-  digitalWrite(2, HIGH);
-  digitalWrite(3, HIGH);
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
-  digitalWrite(6, HIGH);
-  digitalWrite(7, HIGH);
+void setup() {
+  // Set all pins as outputs
+  for (int i = 0; i < 6; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
 }
 
 void loop() {
-  // No code needed in loop since the LEDs stay ON
+  // Calculate the current second using millis()
+  unsigned long currentMillis = millis();
+  int currentSecond = (currentMillis / 1000) % 60;  // Wall seconds [0-59]
+
+  // Display the binary representation of the second
+  for (int i = 0; i < 6; i++) {
+    int bitValue = (currentSecond >> i) & 1;  // Extract each bit
+    digitalWrite(ledPins[5 - i], bitValue);  // Update LEDs (MSB to LSB)
+  }
+
+  // Optional: Add a delay to make the LEDs more stable visually
+  delay(100);
 }
