@@ -30,7 +30,7 @@ This project is an LED-based clock that visualizes the passage of time using sec
     }
     ```
 
----
+
 
 ## **Schematic Drawing**
 Below is a simple schematic of the circuit:
@@ -53,28 +53,14 @@ For clarity, here's a graphical schematic:
            |---|>|--- Pin 5
            |---|>|--- Pin 6
            |---|>|--- Pin 7 (MSB of Seconds)
-           |---|>|--- Pin 9 (Odd Minute)
-           |---|>|--- Pin 10 (Even Minute)
+           |---|>|--- Pin 8 (Odd Minute)
+           |---|>|--- Pin 9 (Even Minute)
            |
           GND
 ```
 
 - Each LED is connected to a digital pin via a 220Ω resistor.
 - Pins 2–7 handle the binary representation of seconds.
-- Pins 9 and 10 control the odd and even minute LEDs.
+- Pins 8 and 9 control the odd and even minute LEDs.
 
----
 
-## **How to Run**
-1. **Connect the Circuit**:
-   - Follow the schematic to connect your LEDs to the Arduino board.
-   - Use pins `2–7` for the seconds LEDs, `9` for odd minutes, and `10` for even minutes.
-
-2. **Upload Code**:
-   - Upload the Arduino sketch to your board.
-
-3. **Observe Behavior**:
-   - LEDs 2–7 display the seconds in binary form.
-   - LED 9 lights up for odd minutes, and LED 10 lights up for even minutes.
-
----
