@@ -37,8 +37,8 @@ Below is a simple schematic of the circuit:
 
 ```
 +5V ---[220Ω]---|>|--- Pin X (LEDs for seconds 1–6)
-+5V ---[220Ω]---|>|--- Pin 9 (Odd Minute LED)
-+5V ---[220Ω]---|>|--- Pin 10 (Even Minute LED)
++5V ---[220Ω]---|>|--- Pin 8 (Odd Minute LED)
++5V ---[220Ω]---|>|--- Pin 9 (Even Minute LED)
                  |
                 GND
 ```
