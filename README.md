@@ -33,33 +33,9 @@ This project is an LED-based clock that visualizes the passage of time using sec
 
 
 ## **Schematic Drawing**
-Below is a simple schematic of the circuit:
+![Schematic Drawing](https://app.cirkitdesigner.com/project/3bca6508-02b4-48fa-b752-842b3e8803e5)
 
-```
-+5V ---[220Ω]---|>|--- Pin X (LEDs for seconds 1–6)
-+5V ---[220Ω]---|>|--- Pin 8 (Odd Minute LED)
-+5V ---[220Ω]---|>|--- Pin 9 (Even Minute LED)
-                 |
-                GND
-```
-
-For clarity, here's a graphical schematic:
-```
-          +5V
-           |
-    [220Ω] |---|>|--- Pin 2 (LSB of Seconds)
-           |---|>|--- Pin 3
-           |---|>|--- Pin 4
-           |---|>|--- Pin 5
-           |---|>|--- Pin 6
-           |---|>|--- Pin 7 (MSB of Seconds)
-           |---|>|--- Pin 8 (Odd Minute)
-           |---|>|--- Pin 9 (Even Minute)
-           |
-          GND
-```
-
-- Each LED is connected to a digital pin via a 220Ω resistor.
+- Each LED is connected to a digital pin via a resistor.
 - Pins 2–7 handle the binary representation of seconds.
 - Pins 8 and 9 control the odd and even minute LEDs.
 
