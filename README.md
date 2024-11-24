@@ -34,6 +34,7 @@ This project is an LED-based clock that visualizes the passage of time using sec
 
 ## **Schematic Drawing**
 ![Schematic Drawing](https://app.cirkitdesigner.com/project/3bca6508-02b4-48fa-b752-842b3e8803e5)
+[Schematic Drawing](https://app.cirkitdesigner.com/project/3bca6508-02b4-48fa-b752-842b3e8803e5)
 
 - Each LED is connected to a digital pin via a resistor.
 - Pins 2–7 handle the binary representation of seconds.
